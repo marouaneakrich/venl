@@ -1,0 +1,48 @@
+{
+  "name": "venl",
+  "version": "1.0.0",
+  "description": "A modern, zero-dependency environment loader for Node.js using .venl files with schema validation, auto-casting, NODE_VENL modes, and a built-in CLI.",
+  
+  "author": "Marouane Akrich <y.brox95@gmail.com>",
+  "license": "MIT",
+
+  "main": "src/index.js",
+  "types": "index.d.ts",
+  "type": "module",
+
+  "bin": {
+    "venl": "bin/venl.js"
+  },
+
+  "files": [
+    "src/",
+    "bin/",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+
+  "keywords": [
+    "env",
+    "dotenv",
+    "venl",
+    "environment",
+    "config",
+    "zero-dependency",
+    "nodejs",
+    "environment-variables",
+    "configuration",
+    "cli"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marouaneakrich/venl.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/marouaneakrich/venl/issues"
+  },
+
+  "homepage": "https://github.com/marouaneakrich/venl#readme"
+}
