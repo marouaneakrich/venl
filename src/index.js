@@ -25,6 +25,11 @@ function createVenl() {
     for (const key in env) {
       venl[key] = env[key];
 
+      if (!process.venl) {
+        process.venl = {}; 
+      }
+      process.venl[key] = env[key];
+
       if (process.env[key] === undefined) {
         process.env[key] = env[key];
       }
@@ -34,6 +39,15 @@ function createVenl() {
   };
 
   venl.reload = function () {
+    return venl.load();
+  };
+
+  venl.config = function (options = {}) {
+    if (options.schema) venl.schema = options.schema;
+    if (options.strict !== undefined) venl.strict = options.strict;
+    if (options.envFiles) venl.envFiles = options.envFiles;
+    if (options.autoCast !== undefined) venl.autoCast = options.autoCast;
+
     return venl.load();
   };
 
