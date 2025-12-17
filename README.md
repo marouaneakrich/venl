@@ -65,6 +65,34 @@ console.log(venl.PORT);
 console.log(venl.DEBUG);
 console.log(venl.API_KEY);
 ```
+---
+
+# 📦 Usage in CommonJS and ESM
+``venl`` works in both ES modules and CommonJS.
+
+**ES Modules (default)**
+```js
+import venl from "venl";
+
+venl.load();
+
+console.log(venl.PORT);
+console.log(venl.DEBUG);
+console.log(venl.API_KEY); 
+```
+
+**CommonJS (require)**
+
+```js
+const venl = require("venl");
+
+venl.load();
+
+console.log(venl.PORT);
+console.log(venl.DEBUG);
+console.log(venl.API_KEY);
+```
+
 
 ---
 
@@ -157,11 +185,18 @@ venl run nodemon server.js
 
 # 🛠 package.json Configuration
 
-To enable the CLI and ESM support, `package.json` includes:
+To enable the CLI and ESM/CommonJS support, `package.json` includes:
+
+
 
 ```json
 {
   "type": "module",
+  "main": "index.cjs",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./index.cjs"
+  },
   "bin": {
     "venl": "bin/venl.js"
   }
@@ -173,6 +208,15 @@ Creates the terminal command `venl`.
 
 ### `"type": "module"`  
 Enables ES module syntax (`import/export`).
+
+### `"exports"` and `"main"`
+Allow both:
+
+- `import venl from "venl";`
+
+- `const venl = require("venl");`
+
+
 
 ---
 

@@ -1,14 +1,18 @@
 {
   "name": "venl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A modern, zero-dependency environment loader for Node.js using .venl files with schema validation, auto-casting, NODE_VENL modes, and a built-in CLI.",
   
   "author": "Marouane Akrich <y.brox95@gmail.com>",
   "license": "MIT",
 
-  "main": "src/index.js",
-  "types": "index.d.ts",
   "type": "module",
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./index.cjs"
+  },
 
   "bin": {
     "venl": "bin/venl.js"
@@ -18,6 +22,7 @@
     "src/",
     "bin/",
     "index.d.ts",
+    "index.cjs",
     "LICENSE",
     "README.md"
   ],
