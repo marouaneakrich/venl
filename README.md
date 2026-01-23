@@ -1,5 +1,9 @@
 # venl
 
+[![npm](https://img.shields.io/npm/v/venl)](https://www.npmjs.com/package/venl)
+[![downloads](https://img.shields.io/npm/dm/venl)](https://www.npmjs.com/package/venl)
+[![license](https://img.shields.io/npm/l/venl)](LICENSE)
+
 A modern, zero-dependency environment loader for Node.js, using `.venl` files instead of `.env`.
 
 `venl` automatically loads environment files, validates them, casts values, lets you control modes with `NODE_VENL`, and even includes a CLI for running apps with configuration pre-loaded.
